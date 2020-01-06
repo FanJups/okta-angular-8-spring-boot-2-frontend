@@ -1,2 +1,9 @@
 # okta-angular-8-spring-boot-2-frontend
-FrontEnd Part of 
+## Main
+
+https://github.com/FanJups/okta-angular-8-spring-boot-2
+
+
+## BackEnd
+
+https://github.com/FanJups/okta-angular-8-spring-boot-2-backend
