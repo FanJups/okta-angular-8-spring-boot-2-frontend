@@ -16,7 +16,7 @@ import { CarListComponent } from './car-list/car-list.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
     HttpClientModule
   ],
   providers: [],
