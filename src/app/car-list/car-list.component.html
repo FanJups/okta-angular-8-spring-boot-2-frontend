@@ -1,5 +1,11 @@
-<h2>Car List</h2>
-
-<div *ngFor="let car of cars">
-  {{car.name}}
-</div>
+<mat-card>
+  <mat-card-title>Car List</mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let car of cars">
+        <img mat-list-avatar src="{{car.giphyUrl}}" alt="{{car.name}}">
+        <h3 mat-line>{{car.name}}</h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
