@@ -16,4 +16,8 @@ export class CarService {
     getAll(): Observable<any> {
     return this.http.get(this.API + '/cool-cars');
   }
+
+  get(id: string) {
+    return this.http.get(this.CAR_API + '/' + id);
+  }
 }
