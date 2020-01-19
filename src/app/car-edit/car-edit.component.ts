@@ -44,4 +44,8 @@ export class CarEditComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
   }
 
+  gotoList() {
+    this.router.navigate(['/car-list']);
+  }
+
 }
