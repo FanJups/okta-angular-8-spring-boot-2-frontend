@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
   templateUrl: './car-edit.component.html',
   styleUrls: ['./car-edit.component.css']
 })
-export class CarEditComponent implements OnInit {
+export class CarEditComponent implements OnInit, OnDestroy {
 
   constructor() { }
 
