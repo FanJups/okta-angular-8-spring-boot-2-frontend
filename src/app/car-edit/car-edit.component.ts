@@ -48,4 +48,10 @@ export class CarEditComponent implements OnInit, OnDestroy {
     this.router.navigate(['/car-list']);
   }
 
+  save(form: NgForm) {
+    this.carService.save(form).subscribe(result => {
+      this.gotoList();
+    }, error => console.error(error));
+  }
+
 }
