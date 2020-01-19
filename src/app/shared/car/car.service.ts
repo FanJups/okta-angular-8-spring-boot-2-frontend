@@ -20,4 +20,14 @@ export class CarService {
   get(id: string) {
     return this.http.get(this.CAR_API + '/' + id);
   }
+
+  save(car: any): Observable<any> {
+    let result: Observable<any>;
+    if (car.href) {
+      result = this.http.put(car.href, car);
+    } else {
+      result = this.http.post(this.CAR_API, car);
+    }
+    return result;
+  }
 }
