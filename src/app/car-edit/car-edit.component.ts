@@ -40,4 +40,8 @@ export class CarEditComponent implements OnInit, OnDestroy {
     });
   }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
 }
