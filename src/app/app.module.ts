@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CarListComponent } from './car-list/car-list.component';
 import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
 import { CarEditComponent } from './car-edit/car-edit.component';
+import { AuthRoutingModule } from './auth-routing.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CarEditComponent } from './car-edit/car-edit.component';
     MatInputModule,
     MatListModule,
     MatToolbarModule,
-    FormsModule
+    FormsModule,
+    AuthRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

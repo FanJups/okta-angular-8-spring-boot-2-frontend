@@ -1,12 +1,18 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { OktaAuthModule } from '@okta/okta-angular';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        OktaAuthModule.initAuth({
+          issuer: 'https://not-real.okta.com',
+          clientId: 'fake-client-id',
+          redirectUri: 'http://localhost:4200'
+        })
       ],
       declarations: [
         AppComponent
@@ -26,10 +32,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('okta-angular-spring-boot-frontend');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to okta-angular-spring-boot-frontend!');
+    expect(compiled.querySelector('.content span').textContent).toContain('okta-angular-spring-boot-frontend app is running!');
   });
 });
