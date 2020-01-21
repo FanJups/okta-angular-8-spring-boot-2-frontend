@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { OKTA_CONFIG, OktaAuthModule } from '@okta/okta-angular';
 import { AuthInterceptor } from './shared/okta/auth.interceptor';
+import { MatButtonModule, MatCardModule } from '@angular/material';
+
 
 const oktaConfig = {
   issuer: 'https://myself.okta.com/oauth2/default',
@@ -34,7 +36,9 @@ const routes: Routes = [
     CommonModule,
     HttpClientModule,
     OktaAuthModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatButtonModule,
+    MatCardModule
   ],
   providers: [
     { provide: OKTA_CONFIG, useValue: oktaConfig },
